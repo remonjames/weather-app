@@ -5,12 +5,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Overcast</title>
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="main.js" defer></script>
 </head>
 
 <body>
-
-    <script src="main.js"></script>
+    <header>
+        <a href="#" class="brand">
+            <span class="material-icons">cloud_circle</span>
+            <h1>Overcast</h1>
+        </a>
+        <form action="#" class="searchbar">
+            <input type="search" placeholder="Enter a city">
+            <button class="material-icons">search</button>
+        </form>
+    </header>
+    <main>
+        <section class="topInfo">
+            <div class="topInfo-left">
+                <p class="displayTemp">
+                    <span class="mainTemp">
+                        <span>17</span>
+                        <span>°C</span>
+                    </span>
+                    <span class="feelsLike">
+                        <span>Feels like</span>
+                        <span>
+                            <span>17</span>
+                            <span>°C</span>
+                        </span>
+                    </span>
+                </p>
+                <p class="location">
+                    <span>LONDON,</span>
+                    <span>GB</span>
+                </p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                    <span class="switchLabel">Convert to °F</span>
+                </label>
+            </div>
+            <div class="weatherDescription">
+                <img src=" http://openweathermap.org/img/wn/04d@4x.png" alt="">
+                <p>Scattered Clouds</p>
+            </div>
+        </section>
+        <section class="subInfo">
+            <span>
+                <span class="material-icons">wb_twilight</span>
+                <span>Sunrise</span>
+                <span class="sunTime">05:56</span>
+            </span>
+            <span>
+                <span class="highTemp">H:</span>
+                <span class="highTemp">34°C</span>
+                <span class="lowTemp">L:</span>
+                <span class="lowTemp">26°C</span>
+            </span>
+            <span>
+                <span class="material-icons">wb_twighlight</span>
+                <span>Sunset</span>
+                <span class="sunTime">21:38</span>
+            </span>
+        </section>
+        <section class="bottomInfo">
+            <section>
+                <p>
+                    <span class="material-icons">speed</span>
+                    <span>Pressure</span>
+                    <span class="value">1024 hPa</span>
+                </p>
+                <p>
+                    <span class="material-icons">water_drop</span>
+                    <span>Humidity</span>
+                    <span class="value">83%</span>
+                </p>
+                <p>
+                    <span class="material-icons">visibility</span>
+                    <span>Visibility</span>
+                    <span class="value">8 km</span>
+                </p>
+            </section>
+            <section>
+                <p>
+                    <span class="material-icons">cloud</span>
+                    <span>Cloudiness</span>
+                    <span class="value">75%</span>
+                </p>
+                <p>
+                    <span class="material-icons">air</span>
+                    <span>Wind Speed</span>
+                    <span class="value">6 m/s</span>
+                </p>
+                <p>
+                    <span class="material-icons">moving</span>
+                    <span>Wind Direction</span>
+                    <span class="value">West</span>
+                </p>
+            </section>
+        </section>
+    </main>
 </body>
 
 </html>
