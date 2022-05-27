@@ -148,6 +148,11 @@ main {
     position: relative;
 }
 
+.weatherDescription img {
+    width: 200px;
+    height: 200px;
+}
+
 .weatherDescription p {
     position: absolute;
     bottom: 15px;
@@ -216,9 +221,9 @@ input:checked + .slider:before {
     border-radius: 17px;
 }
   
-  .slider.round:before {
+.slider.round:before {
     border-radius: 50%;
-  }
+}
 
 .switchLabel {
     white-space: nowrap;
@@ -337,7 +342,7 @@ input:checked + .slider:before {
         font-size: 0.8rem;
     }
 
-    .sunInfo {
+    .subInfo {
         font-size: 1rem;
     }
 
@@ -372,8 +377,12 @@ input:checked + .slider:before {
         height: 150px;
     }
 
-    .sunInfo {
+    .subInfo {
         font-size: 0.8rem;
+    }
+
+    .bottomInfo {
+        gap: 20px;
     }
 
     .bottomInfo section > p {
