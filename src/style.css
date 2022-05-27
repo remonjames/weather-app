@@ -4,6 +4,12 @@
 	font-weight: 200 900;
 	font-stretch: 25% 151%;
 }
+@font-face {
+	font-family: 'Azeret';
+	src: url('./AzeretMono-VariableFont.ttf');
+	font-weight: 200 900;
+	font-stretch: 25% 151%;
+}
 
 :root {
     --primary: #083645;
@@ -14,6 +20,7 @@
     --highlight: #c3a91b;
     --highTemp: #DB7093;
     --lowTemp:  #77C4FE;
+    --warning: #e74c3c;
 }
 
 *, *::before, *::after {
@@ -92,6 +99,16 @@ header {
     cursor: pointer;
 }
 
+.error {
+    color: var(--warning);
+    font-size: 1.5rem;
+    display: none;
+}
+
+.error.show {
+    display: block;
+}
+
 /************************* MAIN INFO **************************/
 
 main {
@@ -122,11 +139,11 @@ main {
     display: flex;
 }
 
-.mainTemp {
-    font-size: 0;
+.temp {
+    font-family: 'Azeret', monospace;
 }
 
-.mainTemp span {
+.mainTemp {
     font-size: 5rem;
     font-weight: 700;
 }
@@ -282,7 +299,7 @@ input:checked + .slider:before {
 .bottomInfo {
     display: flex;
     justify-content: space-around;
-    gap: 40px;
+    gap: 30px;
     font-size: 1.25rem;
 }
 
@@ -302,6 +319,7 @@ input:checked + .slider:before {
     align-items: center;
 }
 
+/************************** MEDIUM DISPLAYS *************************/
 
 @media only screen and (max-width: 840px) {
     .brand {
@@ -311,6 +329,10 @@ input:checked + .slider:before {
     .searchbar {
         font-size: 1.25rem;
         width: 350px;
+    }
+
+    .error {
+        font-size: 1.25rem;
     }
 
     .topInfo {
@@ -326,7 +348,7 @@ input:checked + .slider:before {
         font-size: 1.1rem;
     }
 
-    .mainTemp span {
+    .mainTemp {
         font-size: 4rem;
     }
 
@@ -346,6 +368,10 @@ input:checked + .slider:before {
         font-size: 1rem;
     }
 
+    .bottomInfo {
+        gap: 20px;
+    }
+
     .bottomInfo section > p {
         font-size: 0.9rem;
         padding-left: 0;
@@ -360,7 +386,7 @@ input:checked + .slider:before {
         gap: 10px;
     }
 
-    .mainTemp span{
+    .mainTemp {
         font-size: 2.4rem;
     }
 
@@ -379,10 +405,6 @@ input:checked + .slider:before {
 
     .subInfo {
         font-size: 0.8rem;
-    }
-
-    .bottomInfo {
-        gap: 20px;
     }
 
     .bottomInfo section > p {

@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Overcast</title>
-
-
+    <link rel="icon" type="image/x-icon" href="./icon.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="main.js" defer></script>
 </head>
@@ -18,30 +17,25 @@
             <span class="material-icons">cloud_circle</span>
             <h1>Overcast</h1>
         </a>
-        <form action="#" class="searchbar">
-            <input type="search" placeholder="Enter a city">
+        <form action="#" id="searchForm" class="searchbar">
+            <input type="search" id="inputField" placeholder="Enter a city" required>
             <button class="material-icons">search</button>
         </form>
+        <span class="error" id="error">Error! City not found.</span>
     </header>
     <main>
         <section class="topInfo">
             <div class="topInfo-left">
                 <p class="displayTemp">
-                    <span class="mainTemp">
-                        <span id="mainTemp">17</span>
-                        <span>°C</span>
-                    </span>
+                    <span id="mainTemp" class="mainTemp temp">17°C</span>
                     <span class="feelsLike">
                         <span>Feels like</span>
-                        <span>
-                            <span id="feelsLike">17</span>
-                            <span>°C</span>
-                        </span>
+                        <span id="feelsLike" class="temp">17°C</span>
                     </span>
                 </p>
-                <p class="location" id="location">London, GB</p>
+                <p class="location" id="location">Manila, PH</p>
                 <label class="switch">
-                    <input type="checkbox">
+                    <input id="unitToggler" type="checkbox">
                     <span class="slider round"></span>
                     <span class="switchLabel">Convert to °F</span>
                 </label>
@@ -57,7 +51,7 @@
                 <span>Sunrise</span>
                 <span id="sunrise" class="sunTime">05:56</span>
             </span>
-            <span>
+            <span class="temp">
                 <span class="highTemp">H:</span>
                 <span id="highTemp" class="highTemp">34°C</span>
                 <span class="lowTemp">L:</span>
