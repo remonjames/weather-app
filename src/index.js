@@ -15,7 +15,7 @@ const weather = (() => {
 
     errorMessage.classList.remove('show');
 
-    fetch(url)
+    fetch(url, { mode: 'cors' })
       .then((res) => res.json())
       .then((data) => {
         weather.city = data[0].name;
@@ -35,7 +35,7 @@ const weather = (() => {
   function getWeather(coordinates) {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates[0].lat}&lon=${coordinates[0].lon}&appid=${apiKey}`;
 
-    fetch(url)
+    fetch(url, { mode: 'cors' })
       .then((res) => res.json())
       .then((data) => processData(data))
       .then((data) => display.displayData(data, weather.unit))
