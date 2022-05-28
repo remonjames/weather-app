@@ -11,7 +11,7 @@ const weather = (() => {
   const errorMessage = document.getElementById('error');
 
   function getCoordinates(city) {
-    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
+    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
 
     errorMessage.classList.remove('show');
 
