@@ -88,7 +88,7 @@ const display = (() => {
     mainTemp.innerText = formatTemp(weatherData.mainTemp, unit);
     feelsLike.innerText = formatTemp(weatherData.feelsLike, unit);
     location.innerText = `${weather.city}, ${weather.country}`;
-    weatherIcon.src = `http://openweathermap.org/img/wn/${weatherData.icon}@4x.png`;
+    weatherIcon.src = `https://openweathermap.org/img/wn/${weatherData.icon}@4x.png`;
     description.innerText = weatherData.description;
     sunrise.innerText = formatTime(weatherData.sunrise, weatherData.timezone);
     sunset.innerText = formatTime(weatherData.sunset, weatherData.timezone);

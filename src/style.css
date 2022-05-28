@@ -175,6 +175,7 @@ main {
     bottom: 15px;
     font-weight: 700;
     font-size: 1.5rem;
+    white-space: nowrap;
 }
 
 /************************* TOGGLE SWITCH ***********************/
